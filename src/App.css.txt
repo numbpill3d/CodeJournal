@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    background-color: #000000;
+    color: #4ade80;
+    overflow: hidden;
+}
+
+.cyber-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.power-screen {
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    color: #4ade80;
+    text-shadow: 0 0 20px #4ade80, 0 0 40px #1e1e1e;
+    animation: glow 2s infinite alternate;
+}
+
+.book-image {
+    width: 300px;
+    margin-bottom: 20px;
+    animation: pulse 3s infinite;
+}
+
+.power-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #111;
+    border: 2px solid #4ade80;
+    color: #4ade80;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.power-button:hover {
+    background-color: #4ade80;
+    color: #000;
+    box-shadow: 0 0 20px #4ade80, 0 0 40px #1e1e1e;
+}
+
+.book-container {
+    display: flex;
+    width: 80%;
+    height: 60%;
+    border: 2px solid #4ade80;
+    box-shadow: 0 0 20px #4ade80;
+    background: linear-gradient(145deg, #111, #000);
+    animation: open-book 1s ease forwards;
+}
+
+.page {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #4ade80;
+    overflow-y: auto;
+    background: radial-gradient(circle, #111, #000);
+    color: #4ade80;
+    text-shadow: 0 0 5px #4ade80;
+}
+
+.right-page {
+    border-right: none;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #4ade80, 0 0 20px #1e1e1e;
+    }
+    to {
+        text-shadow: 0 0 20px #4ade80, 0 0 50px #1e1e1e;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes open-book {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
